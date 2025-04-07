@@ -10,3 +10,11 @@ class Produit(models.Model):
 
 def __str__(self):
     return self.nomProduit
+
+class Personne(models.Model):
+    nom = models.CharField(max_length=200)
+    prenom = models.CharField(max_length=200)
+    telephone = models.CharField(max_length=100)
+
+def __str__(self):
+    return self.nom

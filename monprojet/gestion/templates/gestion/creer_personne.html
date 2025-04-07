@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Créer une personne</title>
+</head>
+<body>
+    <h1>Créer une nouvelle personne </h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Créer le personne</button>
+    </form>
+
+    <a href="{% url 'afficher_personne' %}">Retour à la liste des personnes</a>
+</body>
+</html>
